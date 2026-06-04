@@ -1,0 +1,73 @@
+@font-face {
+    font-family:'Times New Roman', Times, serif;
+}
+body{
+min-height: 100vh;
+background-image: radial-gradient(circle 60vh at 70% 50%, #FDDF9F,#FFDF98, #FFC649); 
+background-repeat:no-repeat;
+
+}
+#PAGINA{
+ width:100px; 
+ height:100px;
+ 
+}
+.text{
+ width:100px;
+ height:100px; 
+}
+img{
+    width: 50vh;
+    height:50vh;
+    filter: drop-shadow(5vh, 5vh, 5px rgba(0, 0, 0, 0.5));
+    left: 125vh;
+    right: 30vh;
+    top:30vh;
+    bottom: 50vh;
+    position:absolute;
+}
+.text{
+    width: 60vh;
+    height:50vh;
+    background-color: none;
+    border:2px black solid;
+    left:10vh;
+    right:150vh; 
+    top:0; 
+    bottom:0;
+    position:absolute;
+    margin:auto;
+}
+.table {
+  background-color: none;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position:absolute; 
+  top:0vh;
+  bottom:500vh;
+  left:0px;
+  right:auto; 
+  width: 210vh;
+  height: 5vh;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
