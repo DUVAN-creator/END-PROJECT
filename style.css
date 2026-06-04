@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
     font-family:'Times New Roman', Times, serif;
 }
@@ -11,12 +12,18 @@ background-repeat:no-repeat;
  width:100px; 
  height:100px;
  
+=======
+#PAGINA{
+ width:100px; 
+ height:100px;
+>>>>>>> e432aa86c1dce528ab1fd997be2199baa0c80436
 }
 .text{
  width:100px;
  height:100px; 
 }
 img{
+<<<<<<< HEAD
     width: 50vh;
     height:50vh;
     filter: drop-shadow(5vh, 5vh, 5px rgba(0, 0, 0, 0.5));
@@ -71,3 +78,8 @@ a {
   text-decoration: none;
   color: #fff;
 }
+=======
+    width:100px;
+    height:100px;
+}
+>>>>>>> e432aa86c1dce528ab1fd997be2199baa0c80436
