@@ -1,50 +1,84 @@
-<<<<<<< HEAD
-@font-face {
-    font-family:'Times New Roman', Times, serif;
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 body{
 min-height: 100vh;
-background-image: radial-gradient(circle 60vh at 70% 50%, #FDDF9F,#FFDF98, #FFC649); 
+background-image: radial-gradient(circle 50vh at 70% 50%, #FDDF9F,#FFDF98, #FFC649); 
 background-repeat:no-repeat;
-
 }
 #PAGINA{
  width:100px; 
  height:100px;
- 
-=======
+}
 #PAGINA{
  width:100px; 
- height:100px;
->>>>>>> e432aa86c1dce528ab1fd997be2199baa0c80436
-}
-.text{
- width:100px;
  height:100px; 
 }
+.miniatura{
+  width: 10vh;
+  height: 10VH;
+  float:left;
+  top:0;
+  bottom:100vh;
+  left:0px; 
+  right:110vh;
+  margin-left:25px;
+}
 img{
-<<<<<<< HEAD
-    width: 50vh;
-    height:50vh;
-    filter: drop-shadow(5vh, 5vh, 5px rgba(0, 0, 0, 0.5));
-    left: 125vh;
-    right: 30vh;
+    width: 80vh;
+    height: 60VH;
+    box-shadow: (2px, 2px, 5px rgba(0, 0, 0, 0.5));
+    left: 110vh;
+    right: 59vh;
     top:30vh;
     bottom: 50vh;
     position:absolute;
 }
+/* .circle{
+  width:125px;
+  height: 125px;
+  border-radius: 100%;
+  background-color: red;
+  position: absolute;
+  left: 800px;
+  right: 0px;
+  margin:0px;
+  top:398px ;
+  bottom: 10px;
+} */
 .text{
-    width: 60vh;
+    width: 80vh;
     height:50vh;
     background-color: none;
-    border:2px black solid;
+    border:none;
     left:10vh;
-    right:150vh; 
+    right:140vh; 
     top:0; 
     bottom:0;
     position:absolute;
     margin:auto;
 }
+#primero{
+  font-size: 125px;
+  font-style: initial;
+  font-display: flex;
+  margin:20px;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+
+}
+#segundo{
+  font-size: 100px;
+  font-style: initial;
+  font-display: flex;
+  margin:20px;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+  justify-content: center;
+  line-height: 1px;
+}
+
 .table {
   background-color: none;
   color: #fff;
@@ -57,29 +91,49 @@ img{
   bottom:500vh;
   left:0px;
   right:auto; 
-  width: 210vh;
+  width: 195vh;
   height: 5vh;
 }
-
+#delivery{
+left:162vh; 
+right:0px;
+position: absolute;
+margin-left:none;
+line-height: 1px;
+margin-bottom:auto;
+margin-top: 30px;
+margin-RIGHT:0PX ;
+top:0px;
+}
 h1 {
-  margin: 0;
+  left:90px;
+  border:none;
+  padding:none;
+  position:absolute; 
+  top:0px;
+  bottom:100vh;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
+  display: flex; 
+}
+.rows{
+  list-style:none;
+  display:flex;
+  float:right; 
+  right: 0px;
+  left:155vh;
+  position:absolute;
 }
 
 nav li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 a {
   text-decoration: none;
   color: #fff;
 }
-=======
-    width:100px;
-    height:100px;
-}
+
 
