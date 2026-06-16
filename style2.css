@@ -1,0 +1,43 @@
+body{
+    min-height: 100vh;
+    background-repeat:no-repeat;
+}
+div{
+    width: 155vh;
+    height:80vh; 
+    background-color:none;
+    border: 10px black solid;
+    margin:20vh;
+    position:relative;
+    gap:10%;
+    z-index:1;
+}
+header{
+    width: 100px;
+    height:100px;
+    margin:20vh;
+    position: absolute;
+    z-index:2;
+}
+header img{
+
+}
+nav img{
+    width:80vh;
+    height:35vh;   
+    left:90vh;
+    right:50vh;
+    bottom:50vh;
+    top:5vh;
+    position:relative;
+    margin:auto;
+}
+footer img{
+    width:80vh;
+    height:35vh;   
+    left:90vh;
+    right:50vh;
+    top:8vh;
+    position:relative;
+    margin:auto;
+}

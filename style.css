@@ -1,5 +1,7 @@
+
 p {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 body{
 min-height: 100vh;
@@ -15,14 +17,14 @@ background-repeat:no-repeat;
  height:100px; 
 }
 .miniatura{
-  width: 10vh;
+  width: 20vh;
   height: 10VH;
   float:left;
-  top:0;
+  top:30px;
   bottom:100vh;
   left:0px; 
-  right:110vh;
-  margin-left:25px;
+  right:100vh;
+  margin-left:75px;
 }
 img{
     width: 80vh;
@@ -46,6 +48,16 @@ img{
   top:398px ;
   bottom: 10px;
 } */
+ .container{
+  width:62vh;
+  height:8vh;
+  border:7px black dashed;
+  left:13vh;
+  right:0px;
+  position:absolute;
+  top:29vh;
+  bottom:0px;
+ }
 .text{
     width: 80vh;
     height:50vh;
@@ -53,7 +65,7 @@ img{
     border:none;
     left:10vh;
     right:140vh; 
-    top:0; 
+    top:19vh; 
     bottom:0;
     position:absolute;
     margin:auto;
@@ -66,22 +78,24 @@ img{
   justify-content: center;
   align-items: center;
   text-shadow: 2px 2px 4px rgb(255, 255, 255);
-
+  color:#45230A;
 }
 #segundo{
   font-size: 100px;
+  font-width: 100px;
   font-style: initial;
   font-display: flex;
   margin:20px;
   align-items: center;
   text-shadow: 2px 2px 4px rgb(255, 255, 255);
   justify-content: center;
-  line-height: 1px;
+  line-height: 28px;
+  color:#45230A;
 }
 
 .table {
   background-color: none;
-  color: #fff;
+  color: #45230A;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -95,7 +109,7 @@ img{
   height: 5vh;
 }
 #delivery{
-left:162vh; 
+left:155vh; 
 right:0px;
 position: absolute;
 margin-left:none;
@@ -103,37 +117,45 @@ line-height: 1px;
 margin-bottom:auto;
 margin-top: 30px;
 margin-RIGHT:0PX ;
-top:0px;
+top:30px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size:20px;
 }
 h1 {
-  left:90px;
+  left:225px;
   border:none;
   padding:none;
   position:absolute; 
-  top:0px;
+  top:30px;
   bottom:100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:30px; 
 }
 
 nav ul {
   list-style: none;
-  display: flex; 
+  display: flex;
+  margin-right: 500px; 
 }
 .rows{
   list-style:none;
   display:flex;
   float:right; 
   right: 0px;
-  left:155vh;
+  left:120vh;
   position:absolute;
+  top:70px;
 }
 
 nav li {
-  margin-right: 10px;
+  margin-right: 80px;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #45230A;
+  font-size:20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 
