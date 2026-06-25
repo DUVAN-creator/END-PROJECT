@@ -1,0 +1,125 @@
+
+#container{
+    width:100%;
+    height: 100%;
+    background-color:#FEF0D3;
+    position: absolute;
+    margin-left:-10px;
+    margin-right:-10px;
+    margin-top:-10px;
+    
+}
+
+#header-menu{
+    width: 96%;
+    height: 250px;
+    background-color: red;
+    justify-items: center;
+    padding: 2%;
+}
+
+.title{
+    color: #3F2212;
+}
+
+.btn-primary{
+    width: 200px;
+    height: 50px;
+    background-color: #FFC13A;
+}
+
+.btn-primary h3{
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Times New Roman', serif;
+}
+
+#contex h3{
+    width: 1000px;
+    height: 100px;
+    background-color: #ea00ff;
+    justify-items: center;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+
+}
+
+.repertorio{
+    width: 96.9%;
+    height: 345px;
+    padding: 5px;
+    background-color: #00c8ff;
+    display: flex;
+    justify-content: space-around;  
+    padding: 30px;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    font-size: 20px;
+    margin: 10px;
+    margin-top: center;
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.9);
+}
+
+#tecla{
+    width: 100%;
+    height: 316px;
+    background-color: #4400ff;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px; 
+}
+
+#info-p1{
+    width: 200px;
+    height: 300px;
+    background-color: #000608;
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Times New Roman', serif;
+}
+#info-p2{
+    width: 200px;
+    height: 200px;
+    background-color: #000608;
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Times New Roman', serif;
+
+}
+#info-p3{
+    width: 200px;
+    height: 200px;
+    background-color: #000608;
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Times New Roman', serif;
+}
+
+#tittle h2{
+    background-color: #746965;
+    padding-top: 15px;
+    font-family: 'Times New Roman', serif;
+}
+
+#descrip{
+    background-color: #000000;
+    padding: 15px;
+    font-family: 'Times New Roman', serif;
+}
+
+#button{
+    width: 170px;
+    height: 50px;
+    background-color: #DB1E1A;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Times New Roman', serif;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* añadit el resposive */
