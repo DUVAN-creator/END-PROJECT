@@ -66,16 +66,16 @@
 }
 
 #info-p1{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: #000608;
     text-align: center;
     padding-top: 15px;
     font-family: 'Times New Roman', serif;
 }
 #info-p2{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: #000608;
     text-align: center;
     padding-top: 15px;
@@ -83,10 +83,31 @@
 
 }
 #info-p3{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: #000608;
     text-align: center;
     padding-top: 15px;
+    font-family: 'Times New Roman', serif;
+}
+
+#tittle h2{
+    background-color: #746965;
+    padding-top: 15px;
+    font-family: 'Times New Roman', serif;
+}
+
+#descrip{
+    background-color: #000000;
+    padding: 15px;
+    font-family: 'Times New Roman', serif;
+}
+
+#button{
+    width: 170px;
+    height: 50px;
+    background-color: #DB1E1A;
+    text-align: center;
+    padding: 15px;
     font-family: 'Times New Roman', serif;
 }
