@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velocipan</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .pan-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.15;
+      font-size: 3.5rem;
+    }
+
+    .pan-bg-item {
+      position: absolute;
+      animation: floatBg 6s ease-in-out infinite alternate;
+    }
+
+    .pan-bg-item:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+    .pan-bg-item:nth-child(2) { top: 15%; right: 15%; animation-delay: 0.5s; transform: rotate(45deg); }
+    .pan-bg-item:nth-child(3) { bottom: 20%; left: 12%; animation-delay: 1s; transform: rotate(-30deg); }
+    .pan-bg-item:nth-child(4) { bottom: 15%; right: 10%; animation-delay: 1.5s; transform: rotate(90deg); }
+    .pan-bg-item:nth-child(5) { top: 40%; left: 5%; animation-delay: 2s; }
+    .pan-bg-item:nth-child(6) { top: 50%; right: 8%; animation-delay: 0.7s; transform: rotate(120deg); }
+    .pan-bg-item:nth-child(7) { top: 5%; left: 50%; animation-delay: 1.2s; }
+    .pan-bg-item:nth-child(8) { bottom: 5%; left: 45%; animation-delay: 1.8s; transform: rotate(-15deg); }
+
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+    }
+
+    .loader-container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .brand-name {
+      color: #fff;
+      font-size: 3rem;
+      letter-spacing: 4px;
+      text-shadow: 0 0 10px #ff9f43, 0 0 20px #ff6b6b;
+      margin: 0 0 35px 0;
+    }
+
+    .progress-circle-bg {
+      width: 120px;
+      height: 120px;
+      background: transparent;
+      border: 4px dashed #2d2d2d;
+      border-radius: 50%;
+      position: relative;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .progress-pan-loader {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      animation: spinPan 2s linear infinite;
+    }
+
+    .progress-pan-loader::before {
+      content: '🥖';
+      font-size: 2.5rem;
+      position: absolute;
+      top: -20px;
+      left: calc(50% - 1.25rem);
+      transform: rotate(45deg);
+      filter: drop-shadow(0 0 8px #ff9f43);
+    }
+
+    .loading-text {
+      color: #aaa;
+      font-size: 1rem;
+      margin-top: 30px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    @keyframes spinPan {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes floatBg {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-15px) rotate(10deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loading-screen">
+    
+    <div class="pan-background">
+      <div class="pan-bg-item">🍞</div>
+      <div class="pan-bg-item">🥐</div>
+      <div class="pan-bg-item">🥖</div>
+      <div class="pan-bg-item">🥯</div>
+      <div class="pan-bg-item">🍞</div>
+      <div class="pan-bg-item">🥐</div>
+      <div class="pan-bg-item">🥖</div>
+      <div class="pan-bg-item">🥯</div>
+    </div>
+
+    <div class="loader-container">
+      <div class="brand-name">VELOCIPAN</div>
+      
+      <div class="progress-circle-bg">
+        <div class="progress-pan-loader"></div>
+      </div>
+      
+      <div class="loading-text">Cargando...</div>
+    </div>
+  </div>
+
+  <main>
+    <h1>¡Bienvenido a Velocipan!</h1>
+  </main>
+
+  <script>
+    setTimeout(() => {
+      const loadingScreen = document.querySelector('.loading-screen');
+      
+      if (loadingScreen) {
+        loadingScreen.style.transition = 'opacity 0.5s ease, visibility 0.5s';
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.visibility = 'hidden';
+        
+        setTimeout(() => {
+          loadingScreen.remove();
+        }, 500);
+      }
+    }, 60000);
+  </script>
+</body>
+</html>
