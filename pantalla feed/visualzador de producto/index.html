@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocipan - Reservas</title>
+    <style>
+        /* --- ESTILOS CSS --- */
+        .reservation-section {
+            background-color: #fbfbfb;
+            padding: 60px 20px;
+            display: block;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .reservation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #8b5a2b;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            color: #2b1d0c;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .reservation-form {
+            display: block;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .form-group {
+            width: 50%;
+            display: inline-block;
+            padding: 10px;
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            color: #333;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #d9383a;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px 20px;
+            background-color: #d9383a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #b82729;
+        }
+
+        @media (max-width: 768px) {
+            .form-group {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="reservation-section">
+        <div class="reservation-container">
+            <span class="subtitle">PEDIDOS Y RESERVAS</span>
+            <h2 class="title">RESERVA TU PEDIDO</h2>
+            
+            <form action="/reservar" method="POST" class="reservation-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <input type="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="quantity" placeholder="Cantidad de productos / Personas" min="1" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">CONFIRMAR RESERVA</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector(".reservation-form");
+            const dateInput = document.querySelector("input[type='date']");
+            const timeInput = document.querySelector("input[type='time']");
+
+            const hoy = new Date();
+            const mañana = new Date(hoy);
+            mañana.setDate(hoy.getDate() + 1);
+            
+            const minDate = mañana.toISOString().split('T')[0];
+            dateInput.setAttribute("min", minDate);
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                const horaSeleccionada = timeInput.value;
+                if (horaSeleccionada < "08:00" || horaSeleccionada > "20:00") {
+                    alert("Lo sentimos, Velocipan recibe reservas solo entre las 08:00 y las 20:00.");
+                    return;
+                }
+
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+
+                const btnSubmit = form.querySelector(".btn-submit");
+                const originalText = btnSubmit.textContent;
+                btnSubmit.textContent = "PROCESANDO...";
+                btnSubmit.disabled = true;
+
+                try {
+                    const response = await fetch("/reservar", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        alert(`¡Reserva exitosa en Velocipan, ${data.name}! Te esperamos.`);
+                        form.reset();
+                    } else {
+                        alert("Hubo un problema con la reserva. Inténtalo de nuevo.");
+                    }
+                } catch (error) {
+                    console.error("Error al enviar la reserva:", error);
+                    alert("Error de conexión con el servidor.");
+                } finally {
+                    btnSubmit.textContent = originalText;
+                    btnSubmit.disabled = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
