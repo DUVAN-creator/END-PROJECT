@@ -1,136 +1,265 @@
 
-#container{
-    width:100%;
-    height: 1100px;
-    background-color:#FEF0D3;
-    margin-left:-10px;
-    margin-right:-10px;
-    margin-top:-10px;
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ==========================
+   RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#header-menu{
-    width: 96%;
-    height: 250px;
-    /* background-color: red; */
-    justify-items: center;
-    padding: 2%;
+body {
+    font-family: "Times New Roman", serif;
+    /* line-height: 1.5; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('IMG/sellox.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
 }
 
-.title{
+
+/* ==========================
+   CONTENEDOR PRINCIPAL
+========================== */
+
+#container {
+    width: 100%;
+    padding: 40px 0 80px;
+    background: #FEF0D3;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.header {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    width: 220px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #FFC13A;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 48px;
     color: #3F2212;
 }
 
-.btn-primary{
-    width: 200px;
-    height: 50px;
-    background-color: #FFC13A;
-}
+.context {
+    width: 70%;
 
-.btn-primary h3{
     text-align: center;
-    padding-top: 15px;
-    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    color: #444;
 }
 
-#contex h3{
-    width: 1000px;
-    height: 100px;
-    /* background-color: #ea00ff; */
-    justify-items: center;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Times New Roman', serif;
 
-}
+/* ==========================
+   PRODUCTOS
+========================== */
 
-.repertorio{
-    width: 96.9%;
-    height: 345px;
-    padding: 5px;
-    /* background-color: #00c8ff; */
+.productos {
+    width: 90%;
+    margin: 60px auto 0;
+
     display: flex;
-    justify-content: space-around;  
-    padding: 30px;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.box{
-    width: 300px;
-    height: 300px;
-    font-size: 20px;
-    margin: 10px;
-    margin-top: center;
-    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.9);
-    border-radius: 30px;
-}
+.producto {
+    flex: 1 1 280px;
+    min-width: 280px;
+    max-width: 320px;
 
-#tecla{
-    width: 100%;
-    height: 316px;
-    /* background-color: #4400ff; */
     display: flex;
-    justify-content: space-around;
-    padding-top: 15px; 
-}
-
-#info-p1{
-    width: 200px;
-    height: 300px;
-    /* background-color: #000608; */
-    text-align: center;
-    padding-top: 15px;
-    font-family: 'Times New Roman', serif;
-}
-#info-p2{
-    width: 200px;
-    height: 200px;
-    /* background-color: #000608; */
-    text-align: center;
-    padding-top: 15px;
-    font-family: 'Times New Roman', serif;
-
-}
-#info-p3{
-    width: 200px;
-    height: 200px;
-    /* background-color: #000608; */
-    text-align: center;
-    padding-top: 15px;
-    font-family: 'Times New Roman', serif;
-}
-
-#tittle h2{
-    color: #746965;
-    padding-top: 15px;
-    font-family: 'Times New Roman', serif;
-}
-
-#descrip{
-    /* background-color: #000000; */
-    padding: 15px;
-    font-family: 'Times New Roman', serif;
-}
-
-#button{
-    width: 170px;
-    height: 70px;
-    background-color: #DB1E1A;
-    padding: 15px;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
-    color:white;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-#button h3 {
-    color:white;
-    text-align: center;
-    padding-top: 1px;
-    font-family: 'Times New Roman', serif;
+    flex-direction: column;
     align-items: center;
+
+    text-align: center;
+}
+
+.box {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .35);
+}
+
+.producto h2 {
+    margin-top: 25px;
+    color: #5F534D;
+}
+
+.producto p {
+    margin: 18px 0;
+    padding: 0 10px;
+}
+
+.producto button {
+    width: 190px;
+    height: 65px;
+    margin-top: auto;
+
+    border: none;
+    cursor: pointer;
+
+    background: #DB1E1A;
+    color: #FFF;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.producto button:hover {
+    background: #B01714;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer {
+    padding: 60px 8%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    /* background: #ff0000; */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+   
+    
+
+
+    margin: 0;
+    min-height: 100vh;
+    color: #FFF;
+}
+
+
+/* ---------- Logo ---------- */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.seal {
+    width: 180px;
+}
+
+.footer-logo h1 {
+    font-size: 48px;
+}
+
+
+/* ---------- Información ---------- */
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icono {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icono img {
+    width: 35px;
+}
+
+.descripcion {
+    width: 450px;
+    font-size: 20px;
+}
+
+
+/* ---------- Footer inferior ---------- */
+
+.footer-bottom {
+    padding-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    border-top: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer-bottom img {
+    width: 180px;
+}
+
+.footer-bottom h3 {
+    font-size: 28px;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 900px) {
+
+    .context {
+        width: 95%;
+    }
+
+    .productos {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
 }
