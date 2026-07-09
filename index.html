@@ -1,11 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Velocipan - Pedidos Especiales</title>
+    <style>
+        /* ESTILOS DE VELOCIPAN */
+        :root {
+            --pan-brown: #8B4513; /* Color pan horneado */
+            --pan-light: #F5DEB3; /* Color harina/trigo */
+            --fb-blue: #1877f2;
+            --bg-color: #fcf8f2;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .velocipan-card {
+            background: white;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-top: 8px solid var(--pan-brown);
+        }
+
+        .header-velocipan {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header-velocipan h1 {
+            color: var(--pan-brown);
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .header-velocipan p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* FORMULARIO */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: #fafafa;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--pan-brown);
+            background-color: #fff;
+        }
+
+        .divider {
+            border-top: 1px dashed #ccc;
+            margin: 20px 0;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            background-color: var(--pan-brown);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-enviar:hover {
+            background-color: #5D2E0A;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="velocipan-card">
+        <div class="header-velocipan">
+            <h1>VELOCIPAN</h1>
+            <p>Solicitud de Pedidos Especiales</p>
+        </div>
+
+        <form id="formVelocipan">
+            <!-- Credenciales de Usuario -->
+            <div class="form-group">
+                <label>Correo del Usuario</label>
+                <input type="email" id="email" placeholder="nombre@correo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" id="pass" placeholder="••••••••" required>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Detalles del Pedido -->
+            <div class="form-group">
+                <label>Nombre del Producto</label>
+                <input type="text" id="producto" placeholder="Ej: Pan de Bono, Baguette..." required>
+            </div>
+
+            <div class="form-group">
+                <label>Cantidad</label>
+                <input type="number" id="cantidad" min="1" value="1" required>
+            </div>
+
+            <button type="submit" class="btn-enviar">TERMINAR ENVÍO</button>
+        </form>
+
+        <div class="footer-note">
+            Velocipan Automation System © 2026
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('formVelocipan').addEventListener('submit', function(e) {
+            e.preventDefault(); // Detener recarga de página
+
+            // Obtener valores
+            const email = document.getElementById('email').value;
+            const producto = document.getElementById('producto').value;
+            const cantidad = document.getElementById('cantidad').value;
+
+            // Lógica de envío
+            alert("¡Solicitud enviada a Velocipan!\n\n" + 
+                  "Confirmación enviada a: " + email + "\n" +
+                  "Producto: " + producto + "\n" +
+                  "Cantidad: " + cantidad);
+
+            // Limpiar formulario después del envío
+            this.reset();
+        });
+    </script>
+
 </body>
 </html>
