@@ -1,8 +1,3 @@
-
-/* ==========================
-   RESET
-========================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -19,21 +14,11 @@ body {
     height: 500px;
 }
 
-
-/* ==========================
-   CONTENEDOR PRINCIPAL
-========================== */
-
 #container {
     width: 100%;
     padding: 40px 0 80px;
     background: #FEF0D3;
 }
-
-
-/* ==========================
-   HEADER
-========================== */
 
 .header {
     width: 90%;
@@ -69,11 +54,6 @@ body {
     font-size: 18px;
     color: #444;
 }
-
-
-/* ==========================
-   PRODUCTOS
-========================== */
 
 .productos {
     width: 90%;
@@ -137,11 +117,6 @@ body {
     background: #B01714;
 }
 
-
-/* ==========================
-   FOOTER
-========================== */
-
 #contacts{
     padding: 60px 8%;
 
@@ -158,9 +133,6 @@ body {
     color: #FFF;
 }
 
-
-/* ---------- Logo ---------- */
-
 .footer-logo {
     display: flex;
     align-items: center;
@@ -174,9 +146,6 @@ body {
 .footer-logo h1 {
     font-size: 48px;
 }
-
-
-/* ---------- Información ---------- */
 
 .footer-info {
     display: flex;
@@ -207,9 +176,6 @@ body {
     font-size: 20px;
 }
 
-
-/* ---------- Footer inferior ---------- */
-
 .footer-bottom {
     padding-top: 25px;
 
@@ -229,11 +195,6 @@ body {
 .footer-bottom h3 {
     font-size: 28px;
 }
-
-
-/* ==========================
-   RESPONSIVE
-========================== */
 
 @media (max-width: 900px) {
 
